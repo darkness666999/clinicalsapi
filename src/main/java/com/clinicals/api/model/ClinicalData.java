@@ -14,9 +14,9 @@ public class ClinicalData {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
-    private String component_name;
-    private String component_value;
-    private Timestamp measured_date_time;
+    private String componentName;
+    private String componentValue;
+    private Timestamp measuredDateTime;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "patient_id", nullable = false)

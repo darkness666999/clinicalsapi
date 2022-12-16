@@ -30,9 +30,9 @@ public class ClinicalDataService {
         Patient patient = patientRepo.getReferenceById(request.getPatientId());
         ClinicalData clinicalData = new ClinicalData();
         clinicalData.setPatient(patient);
-        clinicalData.setComponent_name(request.getComponentName());
-        clinicalData.setComponent_value(request.getComponentValue());
-        clinicalData.setMeasured_date_time(new Timestamp(System.currentTimeMillis()));
+        clinicalData.setComponentName(request.getComponentName());
+        clinicalData.setComponentValue(request.getComponentValue());
+        clinicalData.setMeasuredDateTime(new Timestamp(System.currentTimeMillis()));
         return clinicalDateRepo.save(clinicalData);
     }
 
